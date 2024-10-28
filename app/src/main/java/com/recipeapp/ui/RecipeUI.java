@@ -111,7 +111,7 @@ public class RecipeUI {
                 System.out.print("Ingredient: ");
                 String ing = br.readLine();
                 if (!(ing.equals("done"))) {
-                    ingredients.add(new Ingredient(ing));
+                    ingredients.add(new Ingredient(ing+","));
                 } else {
                     done = false;
                 }
