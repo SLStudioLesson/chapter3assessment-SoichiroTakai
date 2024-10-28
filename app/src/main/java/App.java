@@ -14,6 +14,16 @@ public class App {
             System.out.println("2. JSON");
             System.out.print("Select (1/2): ");
             String choice = reader.readLine();
+
+            DataHandler dh;
+            switch(choice){
+                case "1"->{dh = new CSVDataHandler();}
+                case "2"->{dh = new JSONDataHandler();}
+                default ->{dh = new CSVDataHandler();}
+            }
+
+            RecipeUI recipeUI = new RecipeUI(dh);
+            recipeUI.displayMenu();
             
 
         } catch (Exception e) {
